@@ -37,17 +37,24 @@ hist(step_by_day, breaks = 20)
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
       
-3 The summary calculates the mean and median of the amount of steps per day         
+3 Calculate the mean and the median of the amount of steps per day         
 
 ```r
-summary(step_by_day)
+median(step_by_day,na.rm=TRUE)
 ```
 
 ```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-##      41    8841   10760   10770   13290   21190       8
+## [1] 10765
 ```
-Mean number of steps per day is 10770 steps, median of the dataset is 10760
+
+```r
+mean(step_by_day, na.rm=TRUE)
+```
+
+```
+## [1] 10766.19
+```
+Mean number of steps per day is 10766,19 steps, median of the dataset is 10765
 
 **What is the average daily activity pattern?**  
 1 Number of steps taken in each interval summed for all dates  
